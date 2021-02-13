@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Туризм</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/calc.css">
 </head>
 <body>
 <!--Заголовок сайта-->
@@ -14,7 +15,6 @@
  <a href="index.html" class="menu-link" >Главная</a>   
  <a href="photo.html" class="menu-link" >Фото</a>
  <a href="order.html" class="menu-link" >Заказ</a>
- <a href="calc.html" class="menu-link">Расчитать</a>
 
 </div> 
 
@@ -27,14 +27,41 @@
  </header>
 <!--Основная часть сайта-->
  <main>
- <div class="main-container">
-<h1 class="main-title">Главаная</h1>
-<div class="main-text">
- <img src="./img/img2.jpg" class="main-image" /> 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi assumenda aliquid numquam illo dignissimos a necessitatibus officiis voluptates earum quidem quisquam provident, repellat soluta omnis inventore veritatis asperiores aut adipisci.    
-<div class="clear"></div>
-</div>   
- </div>  
+<div class="main-container">
+<h1 class="main-title">Расчёт</h1>
+<table class="calc-table">
+    <tr>
+      <td colspan="4" class="input-field">0</td>  
+    </tr>
+<tr>
+<td onclick="numberln('7')">7</td>
+<td onclick="numberln('8')">8</td> 
+<td onclick="numberln('9')">9</td> 
+<td onclick="doAction('+')" class="action">+</td>     
+</tr>    
+<tr>
+   <td onclick="numberln('4')">4</td>
+   <td onclick="numberln('5')">5</td> 
+   <td onclick="numberln('6')">6</td> 
+   <td onclick="doAction('-')"  class="action">-</td>     
+    </tr>  
+    <tr>
+       <td onclick="numberln('1')">1</td>
+       <td onclick="numberln('2')">2</td> 
+       <td onclick="numberln('3')">3</td> 
+       <td onclick="doAction('*')" class="action">*</td>  
+           
+        </tr>  
+        <tr>
+           
+           <td onclick="numberln('0')">0</td>
+           <td class="action"onclick="clearln()">C</td>
+           <td onclick='calculate()' class="action">=</td> 
+           <td onclick="doAction('/')" class="action">/</td>
+                
+            </tr>  
+</table> 
+</div>
  </main>
 
 <!--Подвал сайта-->
@@ -42,7 +69,7 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi assumenda aliqui
 <button class="footer-btn">Обратная связь</button>
 <p class="footert-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum repellendus quia recusandae hic incidunt a, blanditiis sint exercitationem possimus distinctio ad unde aliquid temporibus totam repellat, aspernatur odio. Nulla, tenetur? 
 
-
+<script src="./js/calc.js"></script>  
 
 </body>
 </html>
